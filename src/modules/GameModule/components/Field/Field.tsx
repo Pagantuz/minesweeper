@@ -3,7 +3,7 @@ import { VariableSizeGrid } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { useGameStore } from 'modules/GameModule/store';
 import { Cell } from './components/Cell';
-import { useIsMobile } from 'modules/GameModule/hooks/useIsMobile';
+import { useIsMobile } from 'hooks/useIsMobile';
 
 const Field: React.FC = () => {
   const cells = useGameStore((state) => state.cells);

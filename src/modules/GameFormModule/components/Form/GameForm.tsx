@@ -1,7 +1,5 @@
 import {
   Button,
-  ConfigProvider,
-  Divider,
   Form,
   Input,
   InputNumber,
@@ -13,7 +11,7 @@ import { ROUTES } from 'constants/routes';
 import { TFormValues } from 'modules/GameFormModule/types/FormValues';
 import { rules } from 'modules/GameFormModule/utils/generateRules';
 import { TDifficulty, useGameStore } from 'modules/GameModule';
-import { useIsMobile } from 'modules/GameModule/hooks/useIsMobile';
+import { useIsMobile } from 'hooks/useIsMobile';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Head } from 'UI/Head';
@@ -36,12 +34,14 @@ const GameForm: React.FC = () => {
 
   const onFinish = (values: TFormValues) => {
     if (values.difficulty === 'custom') {
-      const isTooManyMines = values.mines >= values.rows * values.columns;
+      const optimalMinesCount = Math.floor(values.rows * values.columns * 0.2);
+      const isTooManyMines = values.mines > optimalMinesCount;
       if (isTooManyMines) {
         api.error({
+          duration: 5,
+          message: 'Произошла ошибка',
           description:
-            'Количество мин не может быть больше или равно количеству ячеек',
-          message: 'Произошла ошибка'
+            'Слишком много мин. Выиграть такую игру можно будет только случайным образом'
         });
         return;
       }

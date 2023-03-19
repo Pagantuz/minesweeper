@@ -1,4 +1,4 @@
-import { useIsMobile } from 'modules/GameModule/hooks/useIsMobile';
+import { useIsMobile } from 'hooks/useIsMobile';
 import { TCell } from 'modules/GameModule/types/Cell';
 import React from 'react';
 import { ClosedCell } from './ClosedCell';

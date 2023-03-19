@@ -1,5 +1,5 @@
 import { ConfigProvider, Divider, Typography } from 'antd';
-import { useIsMobile } from 'modules/GameModule/hooks/useIsMobile';
+import { useIsMobile } from 'hooks/useIsMobile';
 import React from 'react';
 
 type HeadProps = {
