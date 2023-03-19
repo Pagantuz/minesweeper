@@ -7,7 +7,7 @@ yarn
 yarn start
 ```
 
-Проект также доступен на github-pages
+Проект также доступен на [github-pages](https://pagantuz.github.io/minesweeper/)
 
 ## Описание
 
