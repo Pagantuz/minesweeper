@@ -24,8 +24,11 @@ const generateMines = (
     const isTooClose = dist < 3;
 
     //Наличие бомб в соседних ячейках
-    let isNearExistMine;
+    let isNearExistMine = false;
     forEachNeighbor(rowIndex, colIndex, rows, columns, (row, col) => {
+      if (isNearExistMine) {
+        return;
+      }
       const coordinates = coordinatesToString(row, col);
       if (mineSet.has(coordinates)) {
         isNearExistMine = true;
