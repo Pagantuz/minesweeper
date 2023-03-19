@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+## Запуск
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+```console
+yarn
+yarn start
+```
 
-In the project directory, you can run:
+Проект также доступен на github-pages
 
-### `yarn start`
+## Описание
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Реализация игры "Сапёр".
 
-### `yarn test`
+## Технологии
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+- [React](https://beta.reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Ant Design](https://ant.design/)
+- [React Router](https://reactrouter.com/en/main)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Функционал
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Начальная точка приложения - форма. Она нужна для предварительной настройки игры. После ее заполнения можно начать игру.
+Также в форме есть кнопка для перехода на страницу лидеров.
 
-### `yarn eject`
+После начала игры игрок переходит на страницу игры. Интерфейс представляет собой два элемента: верхняя панель и игровое поле.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+В верхней панели по порядку: счет, кнопка, таймер.
+Счет - это количество мин, из которого вычитается количество флажков, расставленных на поле.
+Кнопка - это создание нового поля с текущими настройками. Если нужно сменить настройки - клик правой клавишей мыши по кнопке вернет игрока к форме для заполнения настроек.
+Таймер - это количество секунд от начала игры. Игра начинается при открытии ячейки или установки флажка.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Игровое поле представляет собой поле ячеек. Ячейка может быть пустой, с цифрой, или с миной. Клик левой клавишей мыши по ячейке открывает ее, если в ячейке есть мина - игрок проигрывает. При открытии первой ячейки игрок не может проиграть. Клик правой клавишей мыши ставит на ячейку флажок. При повторном правом клике по ячейке ставится вопрос, а последующим кликом метка убирается. Цифра на ячейке означает количество мин в восьми соседних ячейках вокруг нее. Если цифра равна количеству флажков вокруг этой ячейки, то на ячейку можно нажать колесом мыши. Нажатие на колесо мыши открывает восемь соседних ячеек даже если флажки расставлены неверно.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Игрок побеждает, если все ячейки с минами помечены флажками, а счет при этом равен нулю.
+Игрок также побеждает, если открыты все ячейки без мин.
