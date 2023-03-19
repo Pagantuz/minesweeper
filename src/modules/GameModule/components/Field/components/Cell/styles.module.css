@@ -1,0 +1,101 @@
+@media (max-width: 767px) {
+  .cell > span {
+    --font-size: 24px;
+  }
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgb(226, 226, 226);
+  cursor: default;
+  user-select: none;
+  font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+.cell {
+  display: block;
+}
+
+.cell > span {
+  --font-size: 24px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: var(--font-size);
+}
+
+.closed {
+  background-color: rgb(200, 200, 200);
+  transition: 0.5s;
+  box-shadow: -1.5px -1.5px 0px 1.5px rgba(150, 150, 150, 0.8) inset,
+    1.5px 1.5px 0px 1.5px rgba(250, 250, 250, 0.8) inset;
+}
+
+.closed:hover {
+  background-color: rgb(170, 170, 170);
+  box-shadow: -1.5px -1.5px 0px 1.5px rgba(120, 120, 120, 0.8) inset,
+    1.5px 1.5px 0px 1.5px rgba(220, 220, 220, 0.8) inset;
+}
+
+.closed > span {
+  cursor: pointer;
+}
+
+.open {
+  box-shadow: -1.5px -1.5px 0px 1.5px rgba(160, 160, 160, 0.2) inset;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+.icon {
+  z-index: 999;
+}
+
+.flag {
+  color: red;
+}
+
+.question {
+  color: yellow;
+}
+
+.number1 {
+  color: blue;
+}
+
+.number2 {
+  color: green;
+}
+
+.number3 {
+  color: red;
+}
+
+.number4 {
+  color: rgb(0, 0, 141);
+}
+
+.number5 {
+  color: brown;
+}
+
+.number6 {
+  color: lightseagreen;
+}
+
+.number7 {
+  color: black;
+}
+
+.number8 {
+  color: white;
+}

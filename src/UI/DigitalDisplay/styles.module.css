@@ -1,0 +1,10 @@
+.display {
+  background-color: black;
+  display: flex;
+  width: max-content;
+  padding: 1px;
+}
+
+.digit ~ .digit {
+  margin-left: 2px;
+}

@@ -1,0 +1,11 @@
+.button {
+  box-shadow: -1.5px -1.5px 0px 1.5px rgba(150, 150, 150, 0.8) inset,
+    1.5px 1.5px 0px 1.5px rgba(222, 222, 222, 0.8) inset;
+  padding: 3px;
+}
+
+.button > * {
+  background: none;
+  border: none;
+  padding: 0;
+}

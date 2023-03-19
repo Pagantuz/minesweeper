@@ -1,0 +1,6 @@
+.timer {
+  width: max-content;
+  box-shadow: 1px 1px 0px 1px rgba(150, 150, 150, 0.8) inset,
+    -1px -1px 0px 1px rgba(230, 230, 230, 0.8) inset;
+  padding: 2px;
+}

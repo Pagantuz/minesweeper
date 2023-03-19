@@ -1,0 +1,89 @@
+.container {
+  --number-color: red;
+  --number-width: 10px;
+
+  --margin-size: calc(var(--number-width) * 0.05);
+  --element-width: calc(
+    calc(var(--number-width) - calc(var(--margin-size) * 2)) / 3
+  );
+  --opacity: 0.2;
+
+  display: grid;
+  width: var(--number-width);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+}
+
+.trapezoid-top {
+  border-top: var(--element-width) solid var(--number-color);
+  border-left: var(--element-width) solid transparent;
+  border-right: var(--element-width) solid transparent;
+  margin-bottom: calc(0px - var(--element-width));
+  width: var(--element-width);
+}
+
+.trapezoid-bottom {
+  border-bottom: var(--element-width) solid var(--number-color);
+  border-left: var(--element-width) solid transparent;
+  border-right: var(--element-width) solid transparent;
+  margin-top: calc(0px - var(--element-width));
+  width: var(--element-width);
+}
+
+.trapezoid-left {
+  border-bottom: var(--element-width) solid transparent;
+  border-left: var(--element-width) solid var(--number-color);
+  border-top: var(--element-width) solid transparent;
+  height: var(--element-width);
+}
+
+.trapezoid-right {
+  border-bottom: var(--element-width) solid transparent;
+  border-right: var(--element-width) solid var(--number-color);
+  border-top: var(--element-width) solid transparent;
+  height: var(--element-width);
+}
+
+.trapezoid-middle-top {
+  border-bottom: calc(var(--element-width) / 100 * 60) solid var(--number-color);
+  border-left: var(--element-width) solid transparent;
+  border-right: var(--element-width) solid transparent;
+  margin-top: calc(0px - var(--element-width));
+  width: var(--element-width);
+}
+
+.trapezoid-middle-bottom {
+  border-top: calc(var(--element-width) / 100 * 60) solid var(--number-color);
+  border-left: var(--element-width) solid transparent;
+  border-right: var(--element-width) solid transparent;
+  margin-bottom: calc(0px - var(--element-width));
+  width: var(--element-width);
+}
+
+.trapezoid-top,
+.trapezoid-bottom,
+.trapezoid-middle-bottom,
+.trapezoid-middle-top {
+  grid-column: 1 / -1;
+  margin-left: var(--margin-size);
+  margin-right: var(--margin-size);
+}
+
+.trapezoid-left,
+.trapezoid-right {
+  margin-top: var(--margin-size);
+  margin-bottom: var(--margin-size);
+}
+
+.trapezoid-top,
+.trapezoid-bottom,
+.trapezoid-middle-bottom,
+.trapezoid-middle-top,
+.trapezoid-left,
+.trapezoid-right {
+  opacity: var(--opacity);
+}
+
+.active {
+  opacity: 1;
+}
