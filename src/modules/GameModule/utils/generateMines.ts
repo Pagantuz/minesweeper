@@ -23,23 +23,23 @@ const generateMines = (
     const dist = Math.sqrt(dx * dx + dy * dy);
     const isTooClose = dist < 3;
 
-    //Наличие бомб в соседних ячейках
-    let isNearExistMine = false;
+    // Количество бомб в соседних ячейках
+    let minesCount = 0;
     forEachNeighbor(rowIndex, colIndex, rows, columns, (row, col) => {
-      if (isNearExistMine) {
+      if (minesCount > 1) {
         return;
       }
       const coordinates = coordinatesToString(row, col);
       if (mineSet.has(coordinates)) {
-        isNearExistMine = true;
+        minesCount++;
       }
     });
 
     if (
       !mineSet.has(minePosition) &&
       !isStartCell &&
-      !isNearExistMine &&
-      !isTooClose
+      !isTooClose &&
+      minesCount <= 1
     ) {
       mineSet.set(minePosition, { rowIndex, colIndex });
     }
