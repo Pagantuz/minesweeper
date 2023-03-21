@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/minesweeper/static/css/main.781ba89a.css",
-    "main.js": "/minesweeper/static/js/main.a961ae87.js",
+    "main.js": "/minesweeper/static/js/main.da2e6941.js",
     "static/css/384.903db846.chunk.css": "/minesweeper/static/css/384.903db846.chunk.css",
-    "static/js/384.0f718d7f.chunk.js": "/minesweeper/static/js/384.0f718d7f.chunk.js",
+    "static/js/384.a7b9fbdf.chunk.js": "/minesweeper/static/js/384.a7b9fbdf.chunk.js",
     "static/js/691.40ded905.chunk.js": "/minesweeper/static/js/691.40ded905.chunk.js",
     "static/js/583.491ff854.chunk.js": "/minesweeper/static/js/583.491ff854.chunk.js",
+    "static/js/6.ad610ab8.chunk.js": "/minesweeper/static/js/6.ad610ab8.chunk.js",
     "static/js/557.fdf5b5f6.chunk.js": "/minesweeper/static/js/557.fdf5b5f6.chunk.js",
     "static/js/65.b6d59103.chunk.js": "/minesweeper/static/js/65.b6d59103.chunk.js",
     "static/js/935.e81b7631.chunk.js": "/minesweeper/static/js/935.e81b7631.chunk.js",
     "index.html": "/minesweeper/index.html",
     "main.781ba89a.css.map": "/minesweeper/static/css/main.781ba89a.css.map",
-    "main.a961ae87.js.map": "/minesweeper/static/js/main.a961ae87.js.map",
+    "main.da2e6941.js.map": "/minesweeper/static/js/main.da2e6941.js.map",
     "384.903db846.chunk.css.map": "/minesweeper/static/css/384.903db846.chunk.css.map",
-    "384.0f718d7f.chunk.js.map": "/minesweeper/static/js/384.0f718d7f.chunk.js.map",
+    "384.a7b9fbdf.chunk.js.map": "/minesweeper/static/js/384.a7b9fbdf.chunk.js.map",
     "691.40ded905.chunk.js.map": "/minesweeper/static/js/691.40ded905.chunk.js.map",
     "583.491ff854.chunk.js.map": "/minesweeper/static/js/583.491ff854.chunk.js.map",
+    "6.ad610ab8.chunk.js.map": "/minesweeper/static/js/6.ad610ab8.chunk.js.map",
     "557.fdf5b5f6.chunk.js.map": "/minesweeper/static/js/557.fdf5b5f6.chunk.js.map",
     "65.b6d59103.chunk.js.map": "/minesweeper/static/js/65.b6d59103.chunk.js.map",
     "935.e81b7631.chunk.js.map": "/minesweeper/static/js/935.e81b7631.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.781ba89a.css",
-    "static/js/main.a961ae87.js"
+    "static/js/main.da2e6941.js"
   ]
 }

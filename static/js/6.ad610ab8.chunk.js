@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkminesweeper=self.webpackChunkminesweeper||[]).push([[6],{6006:function(e,n,r){r.r(n),r.d(n,{default:function(){return t}});r(2791);var u=r(7689),s=r(184),t=function(e){var n=e.url;return null!==(0,u.bS)("/")?(0,s.jsx)(u.Fg,{to:n,replace:!0}):(0,s.jsx)(u.j3,{})}}}]);
+//# sourceMappingURL=6.ad610ab8.chunk.js.map
